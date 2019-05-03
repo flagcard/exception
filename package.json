@@ -1,0 +1,31 @@
+{
+  "name": "flagcard-exception",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test node_modules/mocha/bin/_mocha  --opts test/config/mocha.opts --recursive ./test/**/*.test.js",
+    "lint": "eslint src/** index.js test/**",
+    "lint:fix": "eslint src/** index.js test/** --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flagcard/exception.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flagcard/exception/issues"
+  },
+  "homepage": "https://github.com/flagcard/exception#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "eslint": "^5.14.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
