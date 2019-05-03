@@ -20,13 +20,14 @@
   "homepage": "https://github.com/flagcard/exception#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
     "eslint": "^5.14.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4",
+    "sinon": "^7.3.2"
   },
   "dependencies": {
     "http-status": "^1.3.2"
