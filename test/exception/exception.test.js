@@ -1,5 +1,5 @@
 /* global expect */
-const Exception = require('../src/exception');
+const Exception = require('../../src/exception/exception');
 
 describe('Exception', () => {
   it('Exception class', () => {
