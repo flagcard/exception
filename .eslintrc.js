@@ -6,7 +6,8 @@ module.exports = {
     "before": true,
     "afterEach": true,
     "beforeEach": true,
-    "after": true
+    "after": true,
+    "expect": true
   },
   "rules": {
     "no-plusplus": "off",

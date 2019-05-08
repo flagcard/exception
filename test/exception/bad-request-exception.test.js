@@ -1,4 +1,3 @@
-/* global expect */
 const BadRequestException = require('../../src/exception/bad-request-exception');
 
 describe('BadRequestException', () => {

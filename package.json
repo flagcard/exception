@@ -1,6 +1,6 @@
 {
-  "name": "flagcard-exception",
-  "version": "0.0.2",
+  "name": "@flagcard/exception",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
