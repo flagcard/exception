@@ -1,14 +1,18 @@
 const httpstatus = require('http-status');
+const log = require('@flagcard/log');
 
 module.exports = (err, res) => {
-  const message = {
-    code: err.status,
-    status: err.message,
+  let statusCode = err.status;
+  const o = {
+    status: err.message, // Utilizado apenas no servidor de transação
+    message: err.message,
   };
   if (!err.status) {
-    message.code = httpstatus.INTERNAL_SERVER_ERROR;
-    message.status = 'INTERNAL_SERVER_ERROR';
+    statusCode = httpstatus.INTERNAL_SERVER_ERROR;
+    o.status = 'INTERNAL_SERVER_ERROR';
+    o.message = err;
   }
-  res.status(message.code)
-    .json({ status: message.status });
+  log.error(JSON.stringify(err));
+  res.status(statusCode)
+    .json(o);
 };
