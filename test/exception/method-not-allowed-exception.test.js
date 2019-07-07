@@ -5,6 +5,6 @@ describe('MethodNotAllowedException', () => {
     const exception = new MethodNotAllowedException('some message');
     expect(exception.name).to.be.equal('MethodNotAllowedException');
     expect(exception.message).to.be.equal('some message');
-    expect(exception.status).to.be.equal(405);
+    expect(exception.code).to.be.equal(405);
   });
 });

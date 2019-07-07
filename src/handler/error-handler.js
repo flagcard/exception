@@ -1,18 +1,16 @@
+/* eslint no-unused-vars: off */
 const httpstatus = require('http-status');
-const log = require('@flagcard/log');
 
-module.exports = (err, res) => {
-  let statusCode = err.status;
+module.exports = (err, req, res, next) => {
   const o = {
-    status: err.message, // Utilizado apenas no servidor de transação
+    code: err.code,
+    name: err.name,
     message: err.message,
   };
-  if (!err.status) {
-    statusCode = httpstatus.INTERNAL_SERVER_ERROR;
-    o.status = 'INTERNAL_SERVER_ERROR';
+  if (!err.code) {
+    o.code = httpstatus.INTERNAL_SERVER_ERROR;
     o.message = err;
   }
-  log.error(JSON.stringify(err));
-  res.status(statusCode)
+  res.status(o.code)
     .json(o);
 };

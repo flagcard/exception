@@ -4,7 +4,7 @@ const Exception = require('./exception');
 class BadRequestException extends Exception {
   constructor(message) {
     super(message);
-    this.status = httpstatus.BAD_REQUEST;
+    this.code = httpstatus.BAD_REQUEST;
   }
 }
 

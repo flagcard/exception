@@ -4,7 +4,7 @@ const Exception = require('./exception');
 class MethodNotAllowedException extends Exception {
   constructor(message) {
     super(message);
-    this.status = httpstatus.METHOD_NOT_ALLOWED;
+    this.code = httpstatus.METHOD_NOT_ALLOWED;
   }
 }
 

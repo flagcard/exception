@@ -6,5 +6,6 @@ describe('Exception', () => {
     const exception = new Exception('some message');
     expect(exception.name).to.be.equal('Exception');
     expect(exception.message).to.be.equal('some message');
+    expect(exception.code).to.be.equal(500);
   });
 });

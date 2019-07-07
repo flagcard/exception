@@ -4,7 +4,7 @@ const Exception = require('./exception');
 class UnauthorizedUserException extends Exception {
   constructor(message) {
     super(message);
-    this.status = httpstatus.UNAUTHORIZED;
+    this.code = httpstatus.UNAUTHORIZED;
   }
 }
 

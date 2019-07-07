@@ -4,7 +4,7 @@ const Exception = require('./exception');
 class NotFoundException extends Exception {
   constructor(message) {
     super(message);
-    this.status = httpstatus.NOT_FOUND;
+    this.code = httpstatus.NOT_FOUND;
   }
 }
 
