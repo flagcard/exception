@@ -1,4 +1,4 @@
-# @flagcard/exception
+-rf# @flagcard/exception
 
 Exception lib for projects in javascript
 

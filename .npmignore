@@ -2,3 +2,4 @@ tsconfig.json
 .editorconfig
 .eslintrc
 .idea
+/test
