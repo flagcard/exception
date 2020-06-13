@@ -2,9 +2,10 @@
   "name": "@flagcard/exception",
   "version": "2.0.5",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --declaration",
     "test": "NODE_ENV=test jest --config jest.config.json",
     "test:unit": "jest --coverage --config jest.config.json",
     "test:watch": "jest --watch --config jest.config.json",
