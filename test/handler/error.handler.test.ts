@@ -11,7 +11,7 @@ import errorHandler, {
   BadRequestException,
   MethodNotAllowedException,
   NotFoundException,
-  UnauthorizedUserException,
+  UnauthorizedException,
 } from '../../index';
 
 describe('ErrorHandler', () => {
@@ -51,11 +51,11 @@ describe('ErrorHandler', () => {
   });
 
   it('UnauthorizedUserException error', () => {
-    const exception = new UnauthorizedUserException('UnauthorizedUserException');
+    const exception = new UnauthorizedException('UnauthorizedUserException');
     errorHandler(exception, <Request>req, <Response>res, next);
     expect(json.called).toEqual(true);
     expect(json.getCall(0).args[0].status).toEqual(UNAUTHORIZED);
-    expect(json.getCall(0).args[0].name).toEqual('UnauthorizedUserException');
+    expect(json.getCall(0).args[0].name).toEqual('UnauthorizedException');
   });
 
   it('Exception error', () => {
