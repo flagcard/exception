@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@flagcard/log": "^2.1.9",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "http-status": "^1.4.2"
   }
 }
